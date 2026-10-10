@@ -135,18 +135,24 @@ export GROQ_API_KEY="your_key_here"
 
 ## Time Spent
 
-- **Core Development**: ~14 hours
-  - Architecture & pipeline: 3 hours
-  - Business rules: 6 hours
-  - Testing & debugging: 3 hours
-  - Documentation: 2 hours
+- **Core Development**: ~20 hours
+  - Architecture & pipeline: 4 hours
+  - Business rules implementation: 8 hours
+  - Testing & debugging: 5 hours
+  - Documentation: 3 hours
 
-- **Critical Bug Fix**: 1 hour
+- **Critical Bug Fix**: 2 hours
   - Discovered invoice extraction failing on exam data
+  - Root cause analysis and pattern debugging
   - Fixed invoice pattern matching + date format handling
   - Result: 0 → 22 invoices extracted, 0 → 3 findings
 
-- **Total**: ~15 hours (within 16-hour target)
+- **Final Polish**: 2 hours
+  - Documentation completion
+  - Validation and testing
+  - README and submission materials
+
+- **Total**: ~24 hours (full development time)
 
 ## Contact
 

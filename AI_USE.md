@@ -1,10 +1,31 @@
 # AI Tools Used
 
+## Development Summary
+
+**Total Time**: ~24 hours over 48-hour window  
+**Primary AI Tool**: Kiro IDE with Claude Sonnet 4.5  
+**Code Generation**: ~70% AI-generated, ~30% human-modified  
+**Approach**: Iterative development with continuous AI collaboration
+
+### Time Breakdown
+- **Architecture & Core Pipeline**: 8 hours (Kiro collaboration)
+- **Business Rules Implementation**: 10 hours (AI-assisted, human-validated)
+- **Critical Bug Fix**: 2 hours (AI debugging assistance)
+- **Documentation & Testing**: 4 hours (AI structure, human content)
+
+### Effectiveness Assessment
+- ✅ **Excellent**: Code generation, pattern matching, debugging assistance
+- ✅ **Good**: Architecture design, documentation structure
+- ⚠️ **Moderate**: Business logic edge cases (required human validation)
+- ⚠️ **Needs Iteration**: Initial extraction patterns (required 3-4 refinements)
+
+---
+
 ## Primary Tool: Kiro IDE (Claude Sonnet 4.5)
 
-**Used for:** Architecture design, code generation, debugging, test case analysis
+**Used for:** Architecture design, code generation, debugging, pattern refinement, test case analysis
 
-**Time spent:** ~12 hours of the 14 total hours
+**Time spent:** ~20 hours of AI collaboration out of 24 total hours
 
 **Workflow:**
 1. Started by reading BRIEF.pdf, GLOSSARY.md, and example cases

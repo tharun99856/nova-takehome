@@ -280,13 +280,34 @@ nova-takehome/
 
 ## Development Process
 
-This system was developed iteratively with AI assistance (Claude/Kiro):
-- **Hour 0-8**: Core architecture, entity extraction, state management
-- **Hour 8-14**: Business rules for 6 finding classes, debugging edge cases
-- **Hour 14-15**: Exam data testing, discovered invoice extraction bug
-- **Hour 15-16**: Critical bug fix - invoice pattern matching, date format handling
+This system was developed over 24 hours with AI assistance (Claude/Kiro IDE):
 
-See [AI_USE.md](AI_USE.md) for complete development log and prompt history.
+**Phase 1: Foundation (8 hours)**
+- Core architecture design and implementation
+- Document extraction pipeline (email parsing, PDF text extraction)
+- SQLite state management with entity model
+- Initial business rules framework
+
+**Phase 2: Implementation (10 hours)**
+- All 6 finding class implementations
+- Waiver detection with authority validation
+- Contract expiry monitoring
+- Duplicate and overcharge logic
+- Edge case handling and debugging
+
+**Phase 3: Testing & Bug Fixes (4 hours)**
+- Practice data testing
+- Discovered exam data extraction failure
+- Root cause analysis (case sensitivity + pattern mismatch)
+- Fixed invoice detection for multiple formats (TX-*, CDU-*, CDI-*)
+- Date format handling (DD/MM/YYYY conversion)
+
+**Phase 4: Documentation & Polish (2 hours)**
+- Complete SOLUTION.md, DESIGN.md, AI_USE.md
+- README enhancement with examples
+- Submission materials preparation
+
+See [AI_USE.md](AI_USE.md) for complete development log with prompts and decisions.
 
 ## Testing
 
