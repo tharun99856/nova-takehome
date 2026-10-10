@@ -1,0 +1,34 @@
+{
+ "schema_version": "1.0",
+ "as_of": "2031-02-28",
+ "mode": "supervised",
+ "findings": [],
+ "portfolio": {
+  "cashback": [],
+  "expiry": [
+   {
+    "id": "expiry:CDA-US-EXP-E91",
+    "class": "expiry",
+    "contract_id": "CDA-US-EXP-E91",
+    "verdict": "finding",
+    "amount_usd": null,
+    "amount_range": null,
+    "deadline": "2031-04-01",
+    "action": "internal:alert",
+    "confidence": 1.0,
+    "evidence": [
+     {
+      "doc": "batch_01/0003.eml#MSA-CDA-US-EXP-E91.pdf",
+      "page": 3,
+      "quote": "The initial term runs for 12 months and expires on 2031-04-01."
+     }
+    ],
+    "missing_doc": null,
+    "supersedes": [],
+    "retro": false,
+    "learned_at": null
+   }
+  ],
+  "late_fee_risk": []
+ }
+}

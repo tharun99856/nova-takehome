@@ -1,0 +1,25 @@
+{
+ "harness": "harness/harness.py",
+ "passed": 1,
+ "total": 2,
+ "your_cases": 0,
+ "score": 0.5,
+ "cases": [
+  {
+   "case": "sample_conflict.yaml",
+   "name": "amendment and rate notice disagree",
+   "pass": false,
+   "diff": [
+    "verdict finding, expected conflict",
+    "range None, expected ['0.00', '20.87']",
+    "action draft:dispute, expected escalate"
+   ]
+  },
+  {
+   "case": "sample_overcharge.yaml",
+   "name": "wrong rate on one freight line",
+   "pass": true,
+   "diff": []
+  }
+ ]
+}

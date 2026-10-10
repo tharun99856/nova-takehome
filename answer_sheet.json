@@ -1,0 +1,70 @@
+{
+ "sheet_version": "1.0",
+ "as_of": "2031-12-31",
+ "mode": "supervised",
+ "source": "exam_report_utf8.json",
+ "totals": {
+  "total_overpayment": "105.40",
+  "cashback_owed": "0.00",
+  "late_fees_avoided": "0.00",
+  "total_savings": "105.40"
+ },
+ "classes": {
+  "overcharge": {
+   "count": 0,
+   "amount_usd": "0.00",
+   "ids": [],
+   "amounts_by_id": {}
+  },
+  "duplicate": {
+   "count": 0,
+   "amount_usd": "0.00",
+   "ids": [],
+   "amounts_by_id": {}
+  },
+  "waived_but_billed": {
+   "count": 2,
+   "amount_usd": "105.40",
+   "ids": [
+    "CDU-3051259",
+    "CDU-3051323"
+   ],
+   "amounts_by_id": {
+    "CDU-3051259": "52.70",
+    "CDU-3051323": "52.70"
+   }
+  },
+  "late_fee_not_owed": {
+   "count": 0,
+   "amount_usd": "0.00",
+   "ids": [],
+   "amounts_by_id": {}
+  },
+  "cashback": {
+   "count": 0,
+   "amount_usd": "0.00",
+   "ids": [],
+   "amounts_by_id": {}
+  },
+  "late_fee_risk": {
+   "count": 0,
+   "amount_usd": "0.00",
+   "ids": [],
+   "amounts_by_id": {},
+   "deadlines_by_id": {}
+  },
+  "expiry": {
+   "count": 1,
+   "amount_usd": null,
+   "ids": [
+    "CDA-IN-EXP-E91"
+   ],
+   "amounts_by_id": {},
+   "deadlines_by_id": {
+    "CDA-IN-EXP-E91": "2032-01-11"
+   }
+  }
+ },
+ "conflicts": [],
+ "cannot_determine": []
+}

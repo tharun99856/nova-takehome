@@ -1,0 +1,79 @@
+{
+ "schema_version": "1.0",
+ "as_of": "2031-12-31",
+ "mode": "supervised",
+ "findings": [
+  {
+   "id": "waived_but_billed:CDU-3051259",
+   "class": "waived_but_billed",
+   "invoice_id": "CDU-3051259",
+   "verdict": "finding",
+   "amount_usd": "52.70",
+   "amount_range": null,
+   "deadline": null,
+   "action": "draft:dispute",
+   "confidence": 0.85,
+   "evidence": [
+    {
+     "doc": "0008.eml#CDU-3051259.pdf",
+     "page": 1,
+     "quote": "Waived Delivery fee charged"
+    }
+   ],
+   "missing_doc": null,
+   "supersedes": [],
+   "retro": false,
+   "learned_at": null
+  },
+  {
+   "id": "waived_but_billed:CDU-3051323",
+   "class": "waived_but_billed",
+   "invoice_id": "CDU-3051323",
+   "verdict": "finding",
+   "amount_usd": "52.70",
+   "amount_range": null,
+   "deadline": null,
+   "action": "draft:dispute",
+   "confidence": 0.85,
+   "evidence": [
+    {
+     "doc": "0011.eml#CDU-3051323.pdf",
+     "page": 1,
+     "quote": "Waived Delivery fee charged"
+    }
+   ],
+   "missing_doc": null,
+   "supersedes": [],
+   "retro": false,
+   "learned_at": null
+  }
+ ],
+ "portfolio": {
+  "cashback": [],
+  "expiry": [
+   {
+    "id": "expiry:CDA-IN-EXP-E91",
+    "class": "expiry",
+    "contract_id": "CDA-IN-EXP-E91",
+    "verdict": "finding",
+    "amount_usd": null,
+    "amount_range": null,
+    "deadline": "2032-01-11",
+    "action": "internal:alert",
+    "confidence": 1.0,
+    "evidence": [
+     {
+      "doc": "batch_01/0001.eml#MSA-CDA-IN-EXP-E91.pdf",
+      "page": 3,
+      "quote": "The initial term runs for 12 months and expires on 2032-01-11."
+     }
+    ],
+    "missing_doc": null,
+    "supersedes": [],
+    "retro": false,
+    "learned_at": null
+   }
+  ],
+  "late_fee_risk": []
+ }
+}

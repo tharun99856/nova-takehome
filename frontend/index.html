@@ -1,0 +1,137 @@
+﻿<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>NovaGuard Freight Audit Dashboard</title>
+  <link rel='stylesheet' href='styles.css'>
+</head>
+<body>
+  <div class='dashboard'>
+    <header class='header'>
+      <div class='header-content'>
+        <h1 class='logo'>NovaGuard</h1>
+        <div class='header-meta'>
+          <span class='as-of'>As of: <strong id='as-of-date'>-</strong></span>
+          <span class='mode-badge' id='mode-badge'>supervised</span>
+        </div>
+      </div>
+    </header>
+
+    <main class='main-content'>
+      <section class='overview-cards'>
+        <div class='card card-primary'>
+          <div class='card-label'>Total Overpayment</div>
+          <div class='card-value' id='total-overpayment'>$0.00</div>
+          <div class='card-detail'>from <span id='overpayment-count'>0</span> findings</div>
+        </div>
+        <div class='card card-success'>
+          <div class='card-label'>Cashback Owed</div>
+          <div class='card-value' id='cashback-owed'>$0.00</div>
+          <div class='card-detail'><span id='cashback-count'>0</span> credits due</div>
+        </div>
+        <div class='card card-warning'>
+          <div class='card-label'>Late Fees Avoided</div>
+          <div class='card-value' id='late-fees-avoided'>$0.00</div>
+          <div class='card-detail'><span id='late-fee-count'>0</span> at risk</div>
+        </div>
+        <div class='card card-info'>
+          <div class='card-label'>Total Savings</div>
+          <div class='card-value' id='total-savings'>$0.00</div>
+          <div class='card-detail'>potential recovery</div>
+        </div>
+      </section>
+
+      <section class='filters'>
+        <div class='filter-group'>
+          <label>Class:</label>
+          <select id='filter-class'>
+            <option value='all'>All Classes</option>
+            <option value='overcharge'>Overcharge</option>
+            <option value='duplicate'>Duplicate</option>
+            <option value='waived_but_billed'>Waived but Billed</option>
+            <option value='late_fee_not_owed'>Late Fee Not Owed</option>
+          </select>
+        </div>
+        <div class='filter-group'>
+          <label>Verdict:</label>
+          <select id='filter-verdict'>
+            <option value='all'>All Verdicts</option>
+            <option value='finding'>Finding</option>
+            <option value='no_finding'>No Finding</option>
+            <option value='conflict'>Conflict</option>
+            <option value='cannot_determine'>Cannot Determine</option>
+          </select>
+        </div>
+        <div class='filter-group'>
+          <label>Confidence:</label>
+          <select id='filter-confidence'>
+            <option value='all'>All Confidence</option>
+            <option value='high'>High (≥0.85)</option>
+            <option value='medium'>Medium (0.70-0.84)</option>
+            <option value='low'>Low (<0.70)</option>
+          </select>
+        </div>
+        <button id='btn-refresh' class='btn-secondary'>Refresh Data</button>
+      </section>
+
+      <section class='findings-section'>
+        <h2>Invoice Findings</h2>
+        <div class='table-container'>
+          <table class='findings-table' id='findings-table'>
+            <thead>
+              <tr>
+                <th>Invoice ID</th>
+                <th>Class</th>
+                <th>Verdict</th>
+                <th>Amount</th>
+                <th>Confidence</th>
+                <th>Action</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody id='findings-tbody'>
+              <tr class='empty-state'>
+                <td colspan='7'>No findings loaded. Click 'Refresh Data' or load a report.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class='portfolio-section'>
+        <h2>Portfolio Alerts</h2>
+        <div class='portfolio-grid'>
+          <div class='portfolio-card'>
+            <h3>Cashback (<span id='portfolio-cashback-count'>0</span>)</h3>
+            <ul id='portfolio-cashback-list' class='alert-list'></ul>
+          </div>
+          <div class='portfolio-card'>
+            <h3>Expiry (<span id='portfolio-expiry-count'>0</span>)</h3>
+            <ul id='portfolio-expiry-list' class='alert-list'></ul>
+          </div>
+          <div class='portfolio-card'>
+            <h3>Late Fee Risk (<span id='portfolio-late-fee-count'>0</span>)</h3>
+            <ul id='portfolio-late-fee-list' class='alert-list'></ul>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <div class='modal' id='detail-modal'>
+    <div class='modal-overlay' onclick='closeModal()'></div>
+    <div class='modal-content'>
+      <div class='modal-header'>
+        <h2 id='modal-title'>Finding Details</h2>
+        <button class='modal-close' onclick='closeModal()'>×</button>
+      </div>
+      <div class='modal-body' id='modal-body'></div>
+    </div>
+  </div>
+
+  <script src='api-adapter.js'></script>
+  <script src='demo-data.js'></script>
+  <script src='app.js'></script>
+</body>
+</html>

@@ -1,0 +1,133 @@
+{
+ "schema_version": "1.0",
+ "as_of": "2035-09-30",
+ "mode": "supervised",
+ "findings": [
+  {
+   "id": "overcharge:TX-US-2035-0204",
+   "class": "overcharge",
+   "invoice_id": "TX-US-2035-0204",
+   "verdict": "finding",
+   "amount_usd": "88.96",
+   "amount_range": null,
+   "deadline": null,
+   "action": "draft:dispute",
+   "confidence": 0.85,
+   "evidence": [
+    {
+     "doc": "0027.eml#TX-US-2035-0204.pdf",
+     "page": 1,
+     "quote": "Air freight USS2-INW2 244 kg"
+    },
+    {
+     "doc": "0001.eml#MSA-TBX-US-EXP-01.pdf",
+     "page": 8,
+     "quote": "USS2-INW2 100-299.5 kg 2.84"
+    }
+   ],
+   "missing_doc": null,
+   "supersedes": [],
+   "retro": false,
+   "learned_at": null
+  },
+  {
+   "id": "overcharge:TX-US-2035-0210",
+   "class": "overcharge",
+   "invoice_id": "TX-US-2035-0210",
+   "verdict": "finding",
+   "amount_usd": "36.07",
+   "amount_range": null,
+   "deadline": null,
+   "action": "draft:dispute",
+   "confidence": 0.85,
+   "evidence": [
+    {
+     "doc": "0034.eml#TX-US-2035-0210.pdf",
+     "page": 1,
+     "quote": "Air freight USC3-INS1 91 kg"
+    },
+    {
+     "doc": "0001.eml#MSA-TBX-US-EXP-01.pdf",
+     "page": 8,
+     "quote": "USC3-INS1 45-99.5 kg 4.71"
+    }
+   ],
+   "missing_doc": null,
+   "supersedes": [],
+   "retro": false,
+   "learned_at": null
+  },
+  {
+   "id": "waived_but_billed:TX-US-2034-0383",
+   "class": "waived_but_billed",
+   "invoice_id": "TX-US-2034-0383",
+   "verdict": "finding",
+   "amount_usd": "116.13",
+   "amount_range": null,
+   "deadline": null,
+   "action": "draft:dispute",
+   "confidence": 0.85,
+   "evidence": [
+    {
+     "doc": "0006.eml#TX-US-2034-0383.pdf",
+     "page": 1,
+     "quote": "Waived Delivery fee charged"
+    }
+   ],
+   "missing_doc": null,
+   "supersedes": [],
+   "retro": false,
+   "learned_at": null
+  },
+  {
+   "id": "waived_but_billed:TX-US-2035-0267",
+   "class": "waived_but_billed",
+   "invoice_id": "TX-US-2035-0267",
+   "verdict": "finding",
+   "amount_usd": "116.13",
+   "amount_range": null,
+   "deadline": null,
+   "action": "draft:dispute",
+   "confidence": 0.85,
+   "evidence": [
+    {
+     "doc": "0035.eml#TX-US-2035-0267.pdf",
+     "page": 1,
+     "quote": "Waived Delivery fee charged"
+    }
+   ],
+   "missing_doc": null,
+   "supersedes": [],
+   "retro": false,
+   "learned_at": null
+  }
+ ],
+ "portfolio": {
+  "cashback": [],
+  "expiry": [],
+  "late_fee_risk": [
+   {
+    "id": "late_fee_risk:TX-US-2035-0257",
+    "class": "late_fee_risk",
+    "invoice_id": "TX-US-2035-0257",
+    "verdict": "finding",
+    "amount_usd": "34.19",
+    "amount_range": null,
+    "deadline": "2035-10-12",
+    "action": "internal:payment_reminder",
+    "confidence": 0.9,
+    "evidence": [
+     {
+      "doc": "0028.eml#TX-US-2035-0257.pdf",
+      "page": 1,
+      "quote": "Due date: 2035-10-12"
+     }
+    ],
+    "missing_doc": null,
+    "supersedes": [],
+    "retro": false,
+    "learned_at": null
+   }
+  ]
+ }
+}

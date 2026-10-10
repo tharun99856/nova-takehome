@@ -53,7 +53,10 @@ def feedback_file(data: Path, fb_dir: Path | None, world: str, batch: str) -> Pa
 def run_step(cmd: list[str], timeout: float, env: dict, cwd: Path | None = None) -> dict:
     t0 = time.monotonic()
     try:
-        r = subprocess.run(cmd, capture_output=True, text=True, timeout=timeout, env=env, cwd=cwd)
+        # Windows fix: use shell=True on Windows to properly execute commands
+        import platform
+        use_shell = platform.system() == 'Windows'
+        r = subprocess.run(cmd, capture_output=True, text=True, timeout=timeout, env=env, cwd=cwd, shell=use_shell)
         rc, out, err = r.returncode, r.stdout, r.stderr
     except subprocess.TimeoutExpired as e:
         rc, out, err = "timeout", (e.stdout or b"").decode() if isinstance(e.stdout, bytes) else (e.stdout or ""), \

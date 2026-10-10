@@ -1,0 +1,11 @@
+{
+ "schema_version": "1.0",
+ "as_of": "2032-08-31",
+ "mode": "supervised",
+ "findings": [],
+ "portfolio": {
+  "cashback": [],
+  "expiry": [],
+  "late_fee_risk": []
+ }
+}
